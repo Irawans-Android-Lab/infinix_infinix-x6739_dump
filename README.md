@@ -1,0 +1,14 @@
+# sys_tssi_64_armv82_infinix-user 13 TP1A.220624.014 423116 release-keys
+- manufacturer: infinix
+- platform: mt6893
+- codename: Infinix-X6739
+- flavor: sys_tssi_64_armv82_infinix-user
+- release: 13
+- id: TP1A.220624.014
+- incremental: 230906V1845
+- tags: release-keys
+- fingerprint: Infinix/X6739-GL/Infinix-X6739:12/SP1A.210812.016/230906V1347:user/release-keys
+- is_ab: true
+- brand: Infinix
+- branch: sys_tssi_64_armv82_infinix-user-13-TP1A.220624.014-423116-release-keys
+- repo: infinix_infinix-x6739_dump

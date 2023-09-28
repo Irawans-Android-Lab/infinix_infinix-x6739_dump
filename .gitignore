@@ -1,0 +1,11 @@
+vendor/etc/dts/dts-eagle.lic
+vendor/data/camera/vidhance/vidhance.lic
+system_ext/priv-app/TranSettingsApk/TranSettingsApk.apk
+system_ext/priv-app/TranAodApk/TranAodApk.apk
+system_ext/app/TranssionCamera/TranssionCamera.apk
+system_ext/apex/com.android.vndk.v30.apex
+product/priv-app/GmsCore/GmsCore.apk
+product/priv-app/Velvet/Velvet.apk
+product/app/EmojiKeyboard/EmojiKeyboard.apk
+product/app/WebViewGoogle/WebViewGoogle.apk
+product/operator/app/Photos/Photos.apk
