@@ -1,0 +1,3 @@
+
+on boot
+    insmod /vendor/lib/modules/read_ahead.ko
