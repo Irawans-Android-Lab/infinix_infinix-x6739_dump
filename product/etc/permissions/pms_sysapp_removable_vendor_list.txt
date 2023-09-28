@@ -1,0 +1,17 @@
+
+id.mjs.etalaseapp
+com.infinix.xshare
+com.trassion.infinix.xclub
+com.transsion.magicshow
+com.google.android.apps.docs
+com.google.android.apps.tachyon
+com.google.android.apps.photos
+com.google.android.videos
+com.funbase.xradio
+com.transsion.filemanagerx
+com.transsion.healthlife
+com.transsion.calculator
+com.transsion.notebook
+com.transsion.soundrecorder
+com.rlk.weathers
+com.transsion.compass

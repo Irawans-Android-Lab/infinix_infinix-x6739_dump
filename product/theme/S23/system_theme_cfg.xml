@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Document>
+<theme-info>
+    <id>-99</id>
+    <name>X-Verse</name>
+    <filename>Xtheme_S23.apk</filename>
+    <string-id>XOS_S23</string-id>
+    <filepath>product/theme/Xtheme_S23/Xtheme_S23.apk</filepath>
+</theme-info>
+<theme-info>
+    <id>-10</id>
+    <name>Geometric Fashion</name>
+    <filename>Xtheme_Geometric.apk</filename>
+    <string-id>Xtheme_Geometric</string-id>
+    <filepath>product/theme/Xtheme_Geometric/Xtheme_Geometric.apk</filepath>
+</theme-info>
+</Document>

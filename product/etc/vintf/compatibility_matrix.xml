@@ -1,0 +1,14 @@
+<!--
+    Input:
+        vendor.transsion.hardware.security.hap_fwk.xml
+-->
+<compatibility-matrix version="5.0" type="framework">
+    <hal format="hidl" optional="true">
+        <name>vendor.transsion.hardware.security.hap</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHap</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>

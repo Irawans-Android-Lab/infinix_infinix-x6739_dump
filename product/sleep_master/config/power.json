@@ -1,0 +1,52 @@
+{
+  "version": "1.0.11",
+  "enabledSleepMaster": true,
+  "enabledAbnormalHandler": true,
+  "enabledForceStop": true,
+  "enabledForegroundForceStop": true,
+  "enabledForegroundForceRemoveWl": true,
+  "foregroundTopForceStopInterval": 60,
+  "enabledTopForegroundForceStop": true,
+  "blackPackages": [
+        "com.jingyao.easybike",
+        "com.clean.oneboost.cleaner.onebooster.security",
+        "com.cleaner.fastcleaner.booster.security.clean",
+        "com.roblox.client",
+        "com.tencent.lolm",
+        "tv.africa.streaming",
+        "com.tencent.tmgp.pubgmhd",
+        "com.tencent.ig",
+        "com.pubg.imobile",
+        "com.purple.files.manager.king",
+        "com.wavefilemaster.filemanager.wav",
+        "com.maps.locator.gps.gpstracker.phone"
+  ],
+  "forceStopPackages": [
+        "com.clean.oneboost.cleaner.onebooster.security",
+        "com.cleaner.fastcleaner.booster.security.clean",
+        "com.tencent.android.qqdownloader",
+        "com.roblox.client",
+        "com.tencent.lolm",
+        "tv.africa.streaming",
+        "com.tencent.tmgp.pubgmhd",
+        "com.tencent.ig",
+        "com.pubg.imobile",
+        "com.purple.files.manager.king",
+        "com.wavefilemaster.filemanager.wav",
+        "com.maps.locator.gps.gpstracker.phone"
+  ],
+  "forceStopForegroundPackages": [
+      "com.roblox.client",
+      "com.purple.files.manager.king",
+      "com.wavefilemaster.filemanager.wav",
+      "com.maps.locator.gps.gpstracker.phone"
+  ],
+  "forceRemoveWlForegroundPackages": [
+  ],
+  "forceStopTopForegroundPackages": [
+        "com.tencent.tmgp.pubgmhd",
+        "com.tencent.ig",
+        "com.pubg.imobile",
+        "com.tencent.lolm"
+  ]
+}
