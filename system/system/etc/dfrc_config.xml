@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (C) 2012 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!--
+dfrc_mode:
+	DFRC_MODE_LOWPOWER = 0;
+	DFRC_MODE_BALANCE = 1;
+	DFRC_MODE_PERFORMANCE = 2;
+
+component:
+	Package: com.foo
+	Activity: com.foo/.Blah
+-->
+<dfrc>
+<!-- DFRC_MODE_LOWPOWER -->
+	<config dfrc_mode="0" component="com.android.launcher3" fps="50"/>
+	<config dfrc_mode="0" component="com.rovio.angrybirds" fps="50"/>
+	<config dfrc_mode="0" component="com.vectorunit.yellow" fps="50"/>
+	<config dfrc_mode="0" component="nl.dotsightsoftware.pacificfighter.release" fps="50"/>
+	<config dfrc_mode="0" component="com.tencent.mm" fps="50"/>
+	<config dfrc_mode="0" component="com.tencent.mm/.plugin.voip.ui.VideoActivity" fps="50"/>
+
+<!-- DFRC_MODE_BALANCE -->
+<!-- 续航单项 -->
+    <config dfrc_mode="1" component="com.rovio.angrybirdsseasons" fps="45"/>
+    <config dfrc_mode="1" component="com.tencent.mm" fps="40"/>
+    <config dfrc_mode="1" component="com.tencent.mobileqq" fps="40"/>
+    <config dfrc_mode="1" component="com.android.chrome" fps="40"/>
+    <config dfrc_mode="1" component="com.sina.weibo" fps="40"/>
+    <config dfrc_mode="1" component="com.transsion.camera" fps="30"/>
+
+<!-- 其他应用 -->
+
+
+
+<!-- top 小游戏 -->
+    <config dfrc_mode="1" component="com.miniclip.eightballpool" fps="45"/>
+    <config dfrc_mode="1" component="com.lydia.wordsgame.word.talent" fps="45"/>
+    <config dfrc_mode="1" component="com.appgame7.friutslegend" fps="45"/>
+    <config dfrc_mode="1" component="com.blacklightsw.ludo" fps="45"/>
+    <config dfrc_mode="1" component="com.mobileguru.candyfever.free" fps="45"/>
+    <config dfrc_mode="1" component="com.puzzlegamesclassic.puzzlegame" fps="45"/>
+    <config dfrc_mode="1" component="com.blockpuzzle.jewel.diamond" fps="45"/>
+    <config dfrc_mode="1" component="com.bitgame.zumbla.deluxe" fps="45"/>
+    <config dfrc_mode="1" component="com.match3blaster.DropStackBallFall" fps="45"/>
+    <config dfrc_mode="1" component="com.intentsoftware.crazyeights.lite" fps="45"/>
+    <config dfrc_mode="1" component="com.faceplus.bubble.breaker" fps="45"/>
+    <config dfrc_mode="1" component="com.nordcurrent.canteenhd" fps="45"/>
+    <config dfrc_mode="1" component="com.knockdown.bottle.game" fps="45"/>
+    <config dfrc_mode="1" component="com.my.cooking.chef.kitchen.craze.fever" fps="45"/>
+    <config dfrc_mode="1" component="com.git.carromking" fps="45"/>
+    <config dfrc_mode="1" component="com.word.puzzle.game.connect" fps="45"/>
+    <config dfrc_mode="1" component="com.game.fallingpuzzle" fps="45"/>
+    <config dfrc_mode="1" component="com.forthblue.pool" fps="45"/>
+    <config dfrc_mode="1" component="com.sweetfuirt.candy" fps="45"/>
+    <config dfrc_mode="1" component="com.globalclassicgame.brickpuzzlelegend" fps="45"/>
+    <config dfrc_mode="1" component="com.h8games.helixjump" fps="45"/>
+    <config dfrc_mode="1" component="com.ezjoynetwork.bubblebirdrescue" fps="45"/>
+    <config dfrc_mode="1" component="com.sky.funnyfruitsplash" fps="45"/>
+    <config dfrc_mode="1" component="bubble.shoot.fruit.splash.game2" fps="45"/>
+    <config dfrc_mode="1" component="com.ketchapp.fruitmaster" fps="45"/>
+    <config dfrc_mode="1" component="com.jawaker.hand" fps="45"/>
+    <config dfrc_mode="1" component="com.fruitheroes.legend" fps="45"/>
+    <config dfrc_mode="1" component="com.ketchapp.knifehit" fps="45"/>
+    <config dfrc_mode="1" component="com.app.rescuecut" fps="45"/>
+    <config dfrc_mode="1" component="com.halfbrick.fruitninjafree" fps="45"/>
+    <config dfrc_mode="1" component="com.acoromo.matatu" fps="45"/>
+    <config dfrc_mode="1" component="io.yarsa.games.ludo" fps="45"/>
+    <config dfrc_mode="1" component="com.cooyostudio.marble.blast2" fps="45"/>
+    <config dfrc_mode="1" component="com.mobirix.swipebrick2" fps="45"/>
+    <config dfrc_mode="1" component="com.cooyostudio.marble.blast" fps="45"/>
+    <config dfrc_mode="1" component="com.ansangha.drparking4" fps="45"/>
+    <config dfrc_mode="1" component="com.alien.shooter.galaxy.attack" fps="45"/>
+    <config dfrc_mode="1" component="best.word.connect.search.free.offline.puzzle.word.games.world" fps="45"/>
+    <config dfrc_mode="1" component="com.rubygames.assassin" fps="45"/>
+    <config dfrc_mode="1" component="com.moonfrog.ludo.club" fps="45"/>
+    <config dfrc_mode="1" component="com.ludo.master.hippo" fps="45"/>
+    <config dfrc_mode="1" component="com.Atinon.PassOver" fps="45"/>
+    <config dfrc_mode="1" component="com.funplus.familyfarm" fps="45"/>
+    <config dfrc_mode="1" component="com.chillingo.robberybobfree.android.row" fps="45"/>
+    <config dfrc_mode="1" component="com.game.space.shooter2" fps="45"/>
+    <config dfrc_mode="1" component="games.spearmint.triplecrush" fps="45"/>
+    <config dfrc_mode="1" component="io.teslatech.callbreak" fps="45"/>
+    <config dfrc_mode="1" component="com.tencent.ludosuperstar" fps="45"/>
+    <config dfrc_mode="1" component="com.zlevelapps.cardgame29" fps="45"/>
+    <config dfrc_mode="1" component="com.ua.building.Lokicraft" fps="45"/>
+    <config dfrc_mode="1" component="io.yarsa.games.cardgame" fps="45"/>
+    <config dfrc_mode="1" component="com.CubeCubeSports.Cubic234PlayerGames" fps="45"/>
+    <config dfrc_mode="1" component="com.craftsman.go" fps="45"/>
+    <config dfrc_mode="1" component="com.mind.quiz.brain.out" fps="45"/>
+    <config dfrc_mode="1" component="com.chillingo.robberybob2.android.gplay" fps="45"/>
+    <config dfrc_mode="1" component="com.Neurononfire.SupremeDuelist" fps="45"/>
+    <config dfrc_mode="1" component="com.frojo.moy7" fps="45"/>
+    <config dfrc_mode="1" component="com.stickman.warriors.stickwarriors.dragon.shadow.fight" fps="45"/>
+    <config dfrc_mode="1" component="beatmaker.edm.musicgames.gunsounds" fps="45"/>
+
+<!-- DFRC_MODE_PERFORMANCE -->
+	<config dfrc_mode="2" component="com.android.launcher3" fps="50"/>
+	<config dfrc_mode="2" component="com.rovio.angrybirds" fps="50"/>
+	<config dfrc_mode="2" component="com.vectorunit.yellow" fps="50"/>
+	<config dfrc_mode="2" component="nl.dotsightsoftware.pacificfighter.release" fps="50"/>
+	<config dfrc_mode="2" component="com.tencent.mm" fps="50"/>
+	<config dfrc_mode="2" component="com.tencent.mm/.plugin.voip.ui.VideoActivity" fps="50"/>
+
+</dfrc>

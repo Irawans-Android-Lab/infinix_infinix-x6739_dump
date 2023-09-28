@@ -1,0 +1,129 @@
+#!/system/bin/sh
+
+package_prop="sys.trancmd.package"
+result_prop="persist.sys.trancmd.result"
+
+function isPropEq(){
+    prop="$1"
+    eq_value="$2"
+    is_eq=$(getprop "$prop")
+    if [ "$is_eq" == "$eq_value" ];then
+        return 1
+    else
+        return 0
+    fi
+}
+
+function checkReady(){
+    isPropEq "sys.trancmd.system.ready" "1"
+    if [ $? -eq 0 ];then
+        isPropEq "sys.boot_completed" "1"
+        is_boot_completed=$?
+        isPropEq "init.svc.bootanim" "stopped"
+        is_bootanim_stopped=$?
+        if [ $is_boot_completed -eq 0 -o $is_bootanim_stopped -eq 0 ];then
+            echo "boot is not completed, please retry later"
+            exit
+        else
+            setprop "$package_prop" "com.reallytek.wg" # reset to midtest
+            setprop "sys.trancmd.system.ready" "1"
+        fi
+    fi
+}
+
+function checkCmdEmpty(){
+    if [ -z "$1" ];then
+        echo "error, cmd is null."
+        exit
+    fi
+}
+
+function executeSpecial(){
+    if [ "$1" = "init" ];then
+        if [ -z "$2" ];then
+            echo "error, package is null"
+            exit
+        fi
+        setprop "$package_prop" "$2"
+        echo "init package $2 success."
+        exit
+    fi
+
+    if [ "$1" = "pkg" ];then
+        package=$(getprop "$package_prop")
+        echo "$package"
+        exit
+    fi
+}
+
+
+function checkPackage() {
+    package=$(getprop "$package_prop")
+    if [ -z "$package" ];then
+        echo "please init package first."
+        exit
+    fi
+}
+
+function sendCmd(){
+    setprop "$result_prop" ""
+    start_result=$(am startservice -n "$1/.cmd.TranCmdService" --es cmd "$2" --es params "$3" 2>&1 |grep -o "Error:")
+    while [ "$start_result" ] # if start fail, restart
+    do
+        start_result=$(am startservice -n "$1/.cmd.TranCmdService" --es cmd "$2" --es params "$3" 2>&1 |grep -o "Error:")
+    done
+    return 1
+}
+
+function showResult(){
+    timeout=10
+    start_time=$(date +%s)
+    result=$(getprop "$result_prop")
+    while [ -z "$result" ];do
+        result=$(getprop "$result_prop")
+        end_time=$(date +%s)
+        consume_time=$(expr "$end_time" - "$start_time")
+        if [ "$consume_time" -ge "$timeout" ];then
+            if [[ "$1" == start_* ]];then
+                package=$(getprop "$package_prop")
+                sendCmd "$package" "stop"
+                result="$1 timeout $timeout s. Stop activity and set result fail"
+            else
+                result="$1 timeout $timeout s. if just boot completed, please try again later."
+            fi
+        fi
+    done
+    echo "$result"
+}
+
+function execute(){
+    package=$(getprop "$package_prop")
+    sendCmd "$package" "$1" "$2"
+    showResult "$1"
+}
+
+function main(){
+    checkReady
+    checkCmdEmpty "$1"
+
+    executeSpecial "$@"
+
+    checkPackage
+
+    params="$*"
+    params=${params##"$1"}
+    params=${params##" "}
+    params=${params//" "/","}
+
+    execute "$1" "$params"
+}
+
+main "$@"
+
+
+
+
+
+
+
+
